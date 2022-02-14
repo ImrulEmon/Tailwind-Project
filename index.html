@@ -13,6 +13,70 @@
 
 <body>
     <header class="bg-sky-50">
+        <!-- nav start -->
+        <section class="pb-8">
+            <nav class="fixed bg-white shadow-lg w-full">
+                <div class="max-w-6xl mx-auto px-4">
+                    <div class="flex justify-between">
+                        <div class="flex space-x-7">
+                            <div>
+                                <!-- Website Logo -->
+                                <a href="#" class="flex items-center py-4 px-2">
+                                    <img src="images/favicon-32x32.png" alt="Logo" class="h-8 w-8 mr-2">
+                                    <span class="uppercase font-semibold text-gray-500 text-lg">ImrulWind</span>
+                                </a>
+                            </div>
+                            <!-- Primary Navbar items -->
+                            <div class="hidden md:flex items-center space-x-1">
+                                <a href="#" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Home</a>
+                                <a href="#women" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Women</a>
+                                <a href="#men" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Men</a>
+                                <a href="#contact" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contact Us</a>
+                            </div>
+                        </div>
+                        <!-- Secondary Navbar items -->
+                        <div class="hidden md:flex items-center space-x-3 ">
+                            <a href="#" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Log In</a>
+                            <a href="#" class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">Sign Up</a>
+                        </div>
+                        <!-- Mobile menu button -->
+                        <div class="md:hidden flex items-center">
+                            <button class="outline-none mobile-menu-button">
+                            <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                                x-show="!showMenu"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- mobile menu -->
+                <div class="hidden mobile-menu">
+                    <ul class="">
+                        <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
+                        <li><a href="#women" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Women</a></li>
+                        <li><a href="#men" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Men</a></li>
+                        <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+                <script>
+                    const btn = document.querySelector("button.mobile-menu-button");
+                    const menu = document.querySelector(".mobile-menu");
+    
+                    btn.addEventListener("click", () => {
+                        menu.classList.toggle("hidden");
+                    });
+                </script>
+            </nav>
+        </section>
+        <!-- nav end -->
         <section class="container md:flex items-center justify-around py-12">
             <div class="ml-4 px-4 space-y-4">
                 <h1 class="text-7xl font-bold uppercase"><span class="text-yellow-400">
@@ -43,7 +107,7 @@
     <!-- main -->
     <main>
         <!-- Women Jacket section-->
-        <section class="container px-8 mx-auto my-12">
+        <section id="#women" class="container px-8 mx-auto my-12">
             <h2 class="uppercase text-3xl text-grat-800 font-bold mb-4">
                 Women Jacket
             </h2>
@@ -134,7 +198,7 @@
             <!-- Men jacket container -->
             <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-7">
                 <!-- Single jacket start -->
-                <div class="shadow-lg rounded-2xl p-4 space-y-4">
+                <div id="#men" class="shadow-lg rounded-2xl p-4 space-y-4">
                     <div class="bg-gray-300 rounded-2xl">
                         <img src="images/jacket-4.png" alt="">
                     </div>
@@ -212,7 +276,7 @@
         <!-- men jacket container end -->
         <!-- Features Start -->
         <section class="grid lg:grid-cols-2 gap-5 container px-8 mx-auto my-12">
-            <div>
+            <div id="contact">
                 <!-- House -->
 
             <div class="p-2">
@@ -277,8 +341,8 @@
         <!-- Features End -->
     </main>
     <!-- footer -->
-    <footer>
-
+    <footer class="text-center font-mono font-bold py-4">
+<p>Copyright © Imrul Emon | TailWind Project 2022</p>
     </footer>
 </body>
 
