@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Banking</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo mx-auto mt-2" src="logo.png" alt="">
+        <h1 class="text-5xl text-center mt-8"> Welcome to <span class="text-orange-500 font-semibold">Money</span>
+            Exchange
+        </h1>
+    </header>
+    <main class="w-3/4 mx-auto">
+        <!-- balance -->
+        <section class="mt-12">
+            <div class="grid lg:grid-cols-3 gap-4 text-white">
+                <div class="bg-blue-400 p-8 rounded">
+                    <h3 class="text-2xl">
+                        Deposit
+                    </h3>
+                    <h4 class="text-4xl">$ <span id="deposit-total">00</span></h4>
+                </div>
+                <div class="bg-yellow-400 p-8 rounded">
+                    <h3 class="text-2xl">
+                        Withdraw
+                    </h3>
+                    <h4 class="text-4xl">$ <span id="withdraw-total">00</span></h4>
+                </div>
+                <div class="bg-green-600 p-8 rounded">
+                    <h3 class="text-2xl">
+                        Balance
+                    </h3>
+                    <h4 class="text-4xl">$ <span id="balance-total">1235</span></h4>
+                </div>
+            </div>
+        </section>
+        <!-- Deposit and WIthdraw input -->
+        <section class="mt-8 text-center">
+            <div class="grid md:grid-cols-2 gap-4">
+                <!-- deposit start -->
+                <div class="bg-emerald-300 p-8 rounded">
+                    <h3 class="text-2xl">Please Deposit</h3>
+                    <!-- --------------------- -->
+
+                    <div>
+                        <input id="deposit-input" class="border border-gray-400 rounded block w-3/4 mb-4 h-12 px-2 mx-auto text-center"
+                            type="text" placeholder="$$ Deposit">
+
+                        <!-- button -->
+                        <button id="deposit-button"
+                            class="bg-blue-400 px-4 py-2 rounded text-white font-medium border-2 border-lime-900">Deposit</button>
+                    </div>
+
+                    <!-- ------------------------- -->
+                </div>
+                <!-- deposit end -->
+                <!-- --------------------- -->
+                <!-- withdraw start -->
+                <div class="bg-red-300 p-8 rounded">
+                    <h3 class="text-2xl">Please Withdraw</h3>
+                    <!-- --------------------- -->
+
+                    <div>
+                        <input id="withdraw-input" class="border border-gray-400 rounded block w-3/4 h-12 mb-4 px-2 mx-auto text-center"
+                            type="text" placeholder="$$ Withdraw">
+
+                        <!-- button -->
+                        <button id="withdraw-button"
+                            class="bg-yellow-400 px-4 py-2 rounded text-white font-medium border-2 border-lime-900">Withdraw</button>
+                    </div>
+
+                    <!-- ------------------------- -->
+                </div>
+                <!-- withdraw end -->
+            </div>
+        </section>
+    </main>
+    <footer class="font-mono text-center mt-36">
+        <p>© 2022,Imrul-Emon. All rights reserved.</p>
+    </footer>
+    <script src="bank-prac.js"></script>
+</body>
+
+</html>
